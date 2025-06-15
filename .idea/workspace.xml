@@ -4,22 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/cli/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/BatchSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ProducerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "francescodonnini"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GentiliEmanuele/batches_producer.git",
+    "accountId": "1577d618-dfe8-42b8-beb1-1d83ed341e3c"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2yXyvGz7hMkP74bkGYt98yJvPGx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,17 +50,28 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.sabd2425" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -50,10 +84,15 @@
       <option name="presentableId" value="Default" />
       <updated>1749995442883</updated>
       <workItem from="1749995443949" duration="2000" />
+      <workItem from="1749996050546" duration="1720000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false" />
   </component>
 </project>
