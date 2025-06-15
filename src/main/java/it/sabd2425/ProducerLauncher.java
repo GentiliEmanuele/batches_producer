@@ -23,7 +23,7 @@ public class ProducerLauncher {
         while (limit--  > 0) {
             var o = client.nextBatch(benchmark);
             if (o.isEmpty()) {
-                LOGGER.log(Level.INFO, () -> String.format("retrieved successfully %d/%d batches", batchCount, benchConfig.getMaxBatches()));
+                LOGGER.log(Level.INFO, String.format("retrieved successfully %d/%d batches", batchCount, benchConfig.getMaxBatches()));
             }
             ++batchCount;
             // TODO: send batch to KAFKA

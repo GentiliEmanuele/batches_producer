@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/cli/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/BatchSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ProducerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +79,17 @@
       <option name="presentableId" value="Default" />
       <updated>1749995442883</updated>
       <workItem from="1749995443949" duration="2000" />
-      <workItem from="1749996050546" duration="1720000" />
+      <workItem from="1749996050546" duration="1739000" />
     </task>
+    <task id="LOCAL-00001" summary="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
+      <option name="closed" value="true" />
+      <created>1749997787647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749997787647</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
