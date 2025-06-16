@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
+    <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="Corretto errore sulla stampa di quanti batch sono stati recuperati rispetto al totale">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/KafkaProducerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/config/Configuration.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,18 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "francescodonnini"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;francescodonnini&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GentiliEmanuele/batches_producer.git",
-    "accountId": "1577d618-dfe8-42b8-beb1-1d83ed341e3c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GentiliEmanuele/batches_producer.git&quot;,
+    &quot;accountId&quot;: &quot;1577d618-dfe8-42b8-beb1-1d83ed341e3c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -42,21 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.sabd2425" />
@@ -79,7 +84,13 @@
       <option name="presentableId" value="Default" />
       <updated>1749995442883</updated>
       <workItem from="1749995443949" duration="2000" />
-      <workItem from="1749996050546" duration="1739000" />
+      <workItem from="1749996050546" duration="1777000" />
+      <workItem from="1750000444937" duration="3065000" />
+      <workItem from="1750009358167" duration="1436000" />
+      <workItem from="1750011988122" duration="294000" />
+      <workItem from="1750015514539" duration="106000" />
+      <workItem from="1750068600508" duration="7000" />
+      <workItem from="1750097316632" duration="630000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
       <option name="closed" value="true" />
@@ -89,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749997787647</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Corretto errore sulla stampa di quanti batch sono stati recuperati rispetto al totale">
+      <option name="closed" value="true" />
+      <created>1749997833868</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749997833868</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false" />
+    <MESSAGE value="Corretto errore sulla stampa di quanti batch sono stati recuperati rispetto al totale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corretto errore sulla stampa di quanti batch sono stati recuperati rispetto al totale" />
   </component>
 </project>
