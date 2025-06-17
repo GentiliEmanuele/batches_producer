@@ -3,6 +3,7 @@ package it.sabd2425.cli;
 import picocli.CommandLine;
 
 import javax.validation.constraints.Positive;
+import java.util.Optional;
 
 public class Command implements Runnable {
     @CommandLine.Option(names = "--apitoken", required = true)
@@ -11,7 +12,7 @@ public class Command implements Runnable {
     @CommandLine.Option(names = "--name", required = true)
     private String name;
 
-    @CommandLine.Option(names = "--limit", required = true, description = "Maximum number of batches")
+    @CommandLine.Option(names = "--limit", defaultValue = "null", description = "Maximum number of batches")
     @Positive
     private Integer limit;
 
@@ -31,8 +32,8 @@ public class Command implements Runnable {
         return name;
     }
 
-    public Integer getLimit() {
-        return limit;
+    public Optional<Integer> getLimit() {
+        return Optional.ofNullable(limit);
     }
 
     public boolean isTest() {

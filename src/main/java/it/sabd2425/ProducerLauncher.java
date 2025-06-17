@@ -19,9 +19,8 @@ public class ProducerLauncher {
         try (var producer = createProducer()) {
             var benchmark = client.create(benchConfig);
             client.start(benchmark);
-            var limit = benchConfig.getMaxBatches();
             var batchCount = 0;
-            while (limit-- > 0) {
+            while (true) {
                 var o = client.nextBatch(benchmark);
                 if (o.isEmpty()) {
                     LOGGER.log(Level.INFO, String.format("retrieved successfully %d/%d batches", batchCount, benchConfig.getMaxBatches()));
@@ -39,7 +38,11 @@ public class ProducerLauncher {
     private static BenchConfig parse(String[] args) {
         var command = new Command();
         new picocli.CommandLine(command).parseArgs(args);
-        return new BenchConfig(command.getApiToken(), command.getName(), command.getLimit(), command.isTest());
+        var limit = command.getLimit();
+        if (limit.isEmpty()) {
+            return new BenchConfig(command.getApiToken(), command.getName(), command.isTest());
+        }
+        return new BenchConfig(command.getApiToken(), command.getName(), limit.get(), command.isTest());
     }
 
     private static RestApiClient createClient() {
