@@ -40,7 +40,6 @@ public class ProducerLauncher {
         new picocli.CommandLine(command).parseArgs(args);
         var limit = command.getLimit();
         if (limit.isEmpty()) {
-            return new BenchConfig(command.getApiToken(), command.getName(), command.isTest());
         }
         return new BenchConfig(command.getApiToken(), command.getName(), limit.get(), command.isTest());
     }

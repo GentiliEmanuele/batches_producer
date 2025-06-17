@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="Prima implementazione del producer per Kafka">
+    <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="--limit non è più obbligatorio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/cli/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/cli/Command.java" afterDir="false" />
@@ -45,25 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ProducerLauncher.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.sabd2425" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.sabd2425.cli.Command" />
+      <module name="batches_producer" />
+      <option name="PROGRAM_PARAMETERS" value="--name ok --apitoken api --test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -92,7 +104,8 @@
       <workItem from="1750098843830" duration="23000" />
       <workItem from="1750170871849" duration="236000" />
       <workItem from="1750171121475" duration="9000" />
-      <workItem from="1750186302034" duration="292000" />
+      <workItem from="1750186302034" duration="1058000" />
+      <workItem from="1750187645686" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
       <option name="closed" value="true" />
@@ -118,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750097994501</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="--limit non è più obbligatorio">
+      <option name="closed" value="true" />
+      <created>1750186625425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750186625425</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +149,7 @@
     <MESSAGE value="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false" />
     <MESSAGE value="Corretto errore sulla stampa di quanti batch sono stati recuperati rispetto al totale" />
     <MESSAGE value="Prima implementazione del producer per Kafka" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prima implementazione del producer per Kafka" />
+    <MESSAGE value="--limit non è più obbligatorio" />
+    <option name="LAST_COMMIT_MESSAGE" value="--limit non è più obbligatorio" />
   </component>
 </project>

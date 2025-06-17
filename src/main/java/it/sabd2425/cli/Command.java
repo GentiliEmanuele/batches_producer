@@ -12,7 +12,7 @@ public class Command implements Runnable {
     @CommandLine.Option(names = "--name", required = true)
     private String name;
 
-    @CommandLine.Option(names = "--limit", defaultValue = "null", description = "Maximum number of batches")
+    @CommandLine.Option(names = "--limit", description = "Maximum number of batches")
     @Positive
     private Integer limit;
 
