@@ -35,7 +35,7 @@ public class ProducerLauncher {
         new picocli.CommandLine(command).parseArgs(args);
         var limit = command.getLimit();
         return limit
-                .map(integer -> new BenchConfig(command.getApiToken(), command.getName(), integer, command.isTest()))
+                .map(i -> new BenchConfig(command.getApiToken(), command.getName(), i, command.isTest()))
                 .orElseGet(() -> new BenchConfig(command.getApiToken(), command.getName(), command.isTest()));
     }
 

@@ -7,7 +7,6 @@
     <list default="true" id="96d3120f-0385-4779-a229-5f5ab243fb93" name="Changes" comment="rimosso log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/ProducerLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/sabd2425/kafka/ChallengeProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +106,7 @@
       <workItem from="1750186302034" duration="1058000" />
       <workItem from="1750187645686" duration="834000" />
       <workItem from="1750188663340" duration="2767000" />
+      <workItem from="1750196567603" duration="3319000" />
     </task>
     <task id="LOCAL-00001" summary="Aggiornato pom.xml, aggiunto Command.java adesso è possibile invocare il producer passando i seguenti parameti da CLI:&#10;.jar --apitoken &lt;apitoken&gt; --name &lt;bench-name&gt; --limit &lt;max batches&gt; --test true|false">
       <option name="closed" value="true" />
