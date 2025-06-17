@@ -20,7 +20,7 @@ public class ChallengeProducer implements AutoCloseable {
         producer.close();
     }
 
-    public void send(String key, byte[] batch) {
+    public void publishBatch(String key, byte[] batch) {
         producer.send(new ProducerRecord<>(topic, key, batch));
     }
 

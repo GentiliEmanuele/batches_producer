@@ -7,11 +7,7 @@ import it.sabd2425.gc25client.errors.DefaultApiException;
 import it.sabd2425.kafka.ChallengeProducer;
 import it.sabd2425.kafka.KafkaProducerFactory;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class ProducerLauncher {
-    private static final Logger LOGGER = Logger.getLogger(ProducerLauncher.class.getName());
     public static void main(String[] args) throws DefaultApiException {
         var benchConfig = parse(args);
         var client = createClient();
@@ -23,11 +19,10 @@ public class ProducerLauncher {
             while (true) {
                 var o = client.nextBatch(benchmark);
                 if (o.isEmpty()) {
-                    LOGGER.log(Level.INFO, String.format("retrieved successfully %d/%d batches", batchCount, benchConfig.getMaxBatches()));
                     break;
                 }
                 ++batchCount;
-                producer.send(benchmark, o.get());
+                producer.publishBatch(benchmark, o.get());
                 if (batchCount % batchSize == 0) {
                     producer.flush();
                 }
@@ -39,10 +34,9 @@ public class ProducerLauncher {
         var command = new Command();
         new picocli.CommandLine(command).parseArgs(args);
         var limit = command.getLimit();
-        if (limit.isEmpty()) {
-            return new BenchConfig(command.getApiToken(), command.getName(), command.isTest());
-        }
-        return new BenchConfig(command.getApiToken(), command.getName(), limit.get(), command.isTest());
+        return limit
+                .map(integer -> new BenchConfig(command.getApiToken(), command.getName(), integer, command.isTest()))
+                .orElseGet(() -> new BenchConfig(command.getApiToken(), command.getName(), command.isTest()));
     }
 
     private static RestApiClient createClient() {
