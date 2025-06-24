@@ -5,7 +5,7 @@ import picocli.CommandLine;
 import javax.validation.constraints.Positive;
 import java.util.Optional;
 
-public class Command implements Runnable {
+public class StartBenchmarkCommand implements Runnable{
     @CommandLine.Option(names = "--apitoken", required = true)
     private String apiToken;
 
@@ -22,6 +22,12 @@ public class Command implements Runnable {
     @Override
     public void run() {
         // unused
+    }
+
+    public static StartBenchmarkCommand fromArgs(String[] args) {
+        var cmd = new StartBenchmarkCommand();
+        new CommandLine(cmd).parseArgs(args);
+        return cmd;
     }
 
     public String getApiToken() {

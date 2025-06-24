@@ -1,16 +1,18 @@
 package it.sabd2425;
 
-import it.sabd2425.cli.Command;
+
+import it.sabd2425.cli.StartBenchmarkCommand;
 import it.sabd2425.gc25client.RestApiClient;
-import it.sabd2425.gc25client.data.BenchConfig;
 import it.sabd2425.gc25client.errors.DefaultApiException;
 import it.sabd2425.kafka.ChallengeProducer;
 import it.sabd2425.kafka.KafkaProducerFactory;
+import it.sabd2425.utils.Utils;
 
 public class ProducerLauncher {
-    public static void main(String[] args) throws DefaultApiException {
-        var benchConfig = parse(args);
-        var client = createClient();
+    public static void main(String[] args) throws DefaultApiException, InterruptedException {
+        var benchConfig = Utils.toBenchConfig(StartBenchmarkCommand.fromArgs(args));
+        var endpoint = Utils.getOrThrow("GC25_API_ENDPOINT");
+        var client = new RestApiClient(endpoint);
         var batchSize = 64;
         try (var producer = createProducer()) {
             var benchmark = client.create(benchConfig);
@@ -28,23 +30,6 @@ public class ProducerLauncher {
                 }
             }
         }
-    }
-
-    private static BenchConfig parse(String[] args) {
-        var command = new Command();
-        new picocli.CommandLine(command).parseArgs(args);
-        var limit = command.getLimit();
-        return limit
-                .map(i -> new BenchConfig(command.getApiToken(), command.getName(), i, command.isTest()))
-                .orElseGet(() -> new BenchConfig(command.getApiToken(), command.getName(), command.isTest()));
-    }
-
-    private static RestApiClient createClient() {
-        var endpoint = System.getenv("GC25_API_ENDPOINT");
-        if (endpoint == null) {
-            throw new IllegalArgumentException("Environment variable GC25_API_ENDPOINT not set");
-        }
-        return new RestApiClient(endpoint);
     }
 
     private static ChallengeProducer createProducer() {
